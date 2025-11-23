@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>晨光阅读会 · Morning Reading Club</title>
+    <style>
+        /* 必须的.page样式，仅修改背景色 */
+        .page {
+            display: inline-block;
+            background-color: #FFA54C; /* 爱马仕橙（学号末位0要求） */
+            box-shadow: 0 0 30px rgba(80, 58, 35, 0.25);
+            text-align: left;
+            max-width: 720px;
+            padding: 20px 30px; /* 新增内边距优化布局 */
+            margin: 20px auto; /* 居中显示 */
+        }
+
+        /* 并集选择器（要求⑤） */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Arial", "Microsoft YaHei", sans-serif;
+            color: #503A23; /* 呼应阴影色，统一标题色调 */
+            margin: 15px 0;
+        }
+
+        /* ID选择器：强调重要提示（要求④） */
+        p#intro {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #D92121; /* 红色强调 */
+            background-color: #FFF8E7;
+            padding: 10px;
+            border-left: 4px solid #D92121;
+        }
+
+        /* 链接伪类（要求②） */
+        a:link {
+            color: #1E40AF; /* 未访问蓝色 */
+            text-decoration: none;
+        }
+        a:visited {
+            color: #7E22CE; /* 已访问紫色 */
+        }
+        a:hover {
+            color: #DC2626; /* hover红色 */
+            text-decoration: underline;
+        }
+        a:active {
+            color: #059669; /* 激活绿色 */
+        }
+
+        /* 带类名的链接（要求⑤） */
+        a.red {
+            color: #EF4444;
+            font-weight: bold;
+            padding: 3px 8px;
+            border: 1px solid #EF4444;
+            border-radius: 4px;
+        }
+        a.blue {
+            color: #3B82F6;
+            font-weight: bold;
+            padding: 3px 8px;
+            border: 1px solid #3B82F6;
+            border-radius: 4px;
+        }
+
+        /* 后代选择器：div>table中的链接（要求①） */
+        div table a {
+            color: #0F766E;
+            font-style: italic;
+        }
+
+        /* 伪元素（要求⑥） */
+        p::first-letter {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #503A23;
+            float: left;
+            margin-right: 5px;
+            line-height: 1;
+        }
+        div::first-line {
+            font-weight: bold;
+            color: #503A23;
+        }
+
+        /* 表格样式优化（提升可读性） */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #503A23;
+            padding: 10px;
+            text-align: center;
+            background-color: #FFF8E7;
+        }
+        th {
+            background-color: #F97316;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* 公告区样式 */
+        .notice {
+            background-color: #FFF8E7;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        /* 链接区容器样式 */
+        .link-container {
+            margin: 20px 0;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- ①顶部标题区 -->
+        <div>
+            <h1>晨光阅读会 · Morning Reading Club</h1>
+        </div>
+
+        <!-- ②活动介绍区 -->
+        <div>
+            <h2>活动介绍</h2>
+            <p>清晨的微光穿透薄雾，洒在翻开的书页上，晨光阅读会正是为热爱早起、钟情文字的你而来。在这里，没有城市的喧嚣，只有纸张翻动的沙沙声与心跳的共鸣，让每一个黎明都因阅读而更有意义。我们相信，早起阅读不仅能培养自律的习惯，更能让心灵在一天之初就得到知识的滋养。</p>
+            <p>活动每周一、三、五早晨6:30-7:30准时开展，地点位于学校图书馆三楼露天平台。无论你喜欢文学经典、历史传记，还是英文原著、科普读物，都能在这里找到志同道合的伙伴。我们会定期组织小型分享会，让大家交流阅读感悟，碰撞思想火花。</p>
+            <p id="intro">重要提示：请参与者提前10分钟到场，自带阅读书籍（建议轻便易携），穿着舒适衣物，避免大声喧哗或使用电子设备外放声音，共同维护静谧的晨读氛围。若遇雨天，活动将转移至图书馆一楼多功能厅。</p>
+        </div>
+
+        <!-- ③活动报名信息表格区 -->
+        <div>
+            <h3>晨读成员报名信息</h3>
+            <table>
+                <tr>
+                    <th>姓名</th>
+                    <th>晨读时间</th>
+                    <th>擅长阅读领域</th>
+                    <th>联系方式</th>
+                </tr>
+                <tr>
+                    <td>李明</td>
+                    <td>6:30-7:30（周一/三）</td>
+                    <td>中国文学</td>
+                    <td><a href="mailto:liming@example.com">发送邮件</a></td>
+                </tr>
+                <tr>
+                    <td>Emma Watson</td>
+                    <td>6:45-7:30（周三/五）</td>
+                    <td>英文原著</td>
+                    <td><a href="mailto:emma@example.com">Send Email</a></td>
+                </tr>
+                <tr>
+                    <td>张伟</td>
+                    <td>6:30-7:20（周一/五）</td>
+                    <td>历史传记</td>
+                    <td><a href="mailto:zhangwei@example.com">发送邮件</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- ④页面链接区 -->
+        <div>
+            <h3>相关链接</h3>
+            <div class="link-container">
+                <a href="https://hongchenwusdnu.github.io/bookstore/job4.html" class="red">查看往期活动照片</a>
+                <a href="job3.html" class="blue">在线咨询活动详情</a>
+            </div>
+        </div>
+
+        <!-- ⑤底部公告区 -->
+        <div class="notice">
+            <p>公告一：本次晨读活动长期招募新成员，无报名费用，欢迎所有对早起阅读感兴趣的同学加入！<br>若需请假，请提前一天在活动群内告知管理员，无故缺席三次将暂时取消活动参与资格。</p>
+            <p>公告二：活动地点位于学校图书馆三楼阅览室外侧平台，请勿携带零食和饮料入内，保持环境整洁。<br>每月月末将评选“晨读之星”，赠送经典书籍或定制书签一套，鼓励大家坚持阅读、分享价值。</p>
+            <p>公告三：后续将推出“21天晨读打卡”挑战活动，连续打卡满21天可获得图书馆借阅权限升级（单次可借10本书），<br>期待与你一起在晨光中遇见更好的自己，用阅读开启元气满满的一天！</p>
+        </div>
+    </div>
+</body>
+</html>
