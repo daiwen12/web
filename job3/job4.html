@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <title>晨光阅读会 · Morning Reading Club</title>
     <style>
+        /* 新增body样式：实现页面整体居中，添加背景色增强视觉效果 */
+        body {
+            text-align: center; /* 让inline-block的.page容器水平居中 */
+            margin: 0;
+            padding: 30px 0; /* 上下留白，避免贴边 */
+            background-color: #f8f5f2; /* 页面背景色，与内容区区分 */
+            font-family: "Arial", "Microsoft YaHei", sans-serif;
+        }
+
         /* 必须的.page样式，仅修改背景色 */
         .page {
             display: inline-block;
             background-color: #FFA54C; /* 爱马仕橙（学号末位0要求） */
             box-shadow: 0 0 30px rgba(80, 58, 35, 0.25);
-            text-align: left;
+            text-align: left; /* 内容区恢复左对齐，符合作业要求 */
             max-width: 720px;
-            padding: 20px 30px; /* 新增内边距优化布局 */
-            margin: 20px auto; /* 居中显示 */
+            padding: 20px 30px; /* 内边距优化布局 */
+            margin: 0 auto; /* 配合body text-align:center实现水平居中 */
+            border-radius: 8px; /* 可选：增加圆角，优化视觉 */
         }
 
         /* 并集选择器（要求⑤） */
@@ -139,10 +149,10 @@
             <h3>晨读成员报名信息</h3>
             <table>
                 <tr>
-                    <th>姓名</th>
-                    <th>晨读时间</th>
-                    <th>擅长阅读领域</th>
-                    <th>联系方式</th>
+                    <<th>姓名</</th>
+                    <<th>晨读时间</</th>
+                    <<th>擅长阅读领域</</th>
+                    <<th>联系方式</</th>
                 </tr>
                 <tr>
                     <td>李明</td>
